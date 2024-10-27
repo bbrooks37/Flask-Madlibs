@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Create a New Madlib{% endblock %}
+
+{% block content %}
+<h1>Create a New Madlib</h1>
+<form action="/create_story" method="post">
+  <label for="title">Story Title:</label>
+  <input type="text" id="title" name="title" required><br><br>
+
+  <label for="words">Parts of Speech (comma-separated):</label>
+  <input type="text" id="words" name="words" required><br><br>
+
+  <label for="template">Story Template (use {word} for placeholders):</label>
+  <textarea id="template" name="template" required></textarea><br><br>
+
+  <input type="submit" value="Create Story">
+</form>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Select Your Story</title>
+  </head>
+  <body>
+    <h1>Select a Story</h1>
+    <form action="/form" method="get">
+      <label for="story">Choose a story:</label>
+      <select name="story" id="story">
+        {% for title in story_titles %}
+          <option value="{{ title }}">{{ title | capitalize }}</option>
+        {% endfor %}
+      </select>
+      <input type="submit" value="Select Story">
+    </form>
+  </body>
+</html>
